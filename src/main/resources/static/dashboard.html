@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Meridian Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell" id="dashboard-shell">
+
+    <aside class="sidebar">
+        <div class="auth-brand">
+            <div class="auth-brand-mark">M</div>
+            <div class="auth-brand-name">Meridian Clinic</div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <button class="active" data-view="view-doctors">Find a doctor</button>
+            <button data-view="view-appointments">My appointments</button>
+        </nav>
+
+        <div class="sidebar-foot">
+            <strong id="user-name">—</strong>
+            <span id="user-role">—</span>
+            <button id="logout-btn">Sign out</button>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <section id="view-doctors" class="view active">
+            <div class="main-header">
+                <h1>Find a doctor</h1>
+                <p>Search by name or specialization, then book a visit.</p>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="doctor-search" placeholder="Search, e.g. Cardiologist or Dr. Rao">
+            </div>
+
+            <div id="doctor-list"></div>
+        </section>
+
+        <section id="view-appointments" class="view">
+            <div class="main-header">
+                <h1>My appointments</h1>
+                <p>Everything you've booked, past and upcoming.</p>
+            </div>
+
+            <div id="appointment-list"></div>
+        </section>
+
+    </main>
+</div>
+
+<div id="booking-modal" class="modal-backdrop hidden">
+    <div class="modal">
+        <h2>Book an appointment</h2>
+        <p class="sub">with <span id="modal-doctor-name"></span></p>
+
+        <div id="booking-error" class="form-error hidden"></div>
+
+        <form id="booking-form">
+            <input type="hidden" id="booking-doctor-id">
+            <div class="field">
+                <label for="booking-date">Date</label>
+                <input type="date" id="booking-date" required>
+            </div>
+            <div class="field">
+                <label for="booking-time">Time</label>
+                <input type="time" id="booking-time" required>
+            </div>
+            <div class="modal-actions">
+                <button type="button" id="modal-cancel" class="btn btn-ghost">Cancel</button>
+                <button type="submit" id="booking-submit" class="btn btn-amber">Confirm booking</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

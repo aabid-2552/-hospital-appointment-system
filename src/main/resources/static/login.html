@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in — Meridian Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-shell">
+
+    <div class="auth-panel">
+        <div class="auth-form-wrap">
+            <div class="auth-brand">
+                <div class="auth-brand-mark">M</div>
+                <div class="auth-brand-name">Meridian Clinic</div>
+            </div>
+
+            <h1>Welcome back</h1>
+            <p class="auth-sub">Sign in to manage your appointments.</p>
+
+            <div id="form-error" class="form-error hidden"></div>
+
+            <form id="login-form">
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="you@example.com">
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Your password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+            </form>
+
+            <p class="auth-switch">New to Meridian? <a href="register.html">Create an account</a></p>
+        </div>
+    </div>
+
+    <div class="auth-illustration">
+        <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="200" cy="200" r="150" stroke="#2a6f73" stroke-width="1"/>
+            <circle cx="200" cy="200" r="110" stroke="#2a6f73" stroke-width="1"/>
+            <path d="M120 210 h40 l15 -45 l20 90 l15 -60 l10 15 h60" stroke="#e2a33d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="120" cy="210" r="5" fill="#e2a33d"/>
+            <circle cx="280" cy="210" r="5" fill="#e2a33d"/>
+        </svg>
+        <div class="auth-illustration-quote">
+            "Booking a doctor should take minutes, not phone calls."
+            <span>Meridian keeps your care coordinated in one place.</span>
+        </div>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

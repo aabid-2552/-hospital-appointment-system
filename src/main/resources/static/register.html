@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account — Meridian Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-shell">
+
+    <div class="auth-panel">
+        <div class="auth-form-wrap">
+            <div class="auth-brand">
+                <div class="auth-brand-mark">M</div>
+                <div class="auth-brand-name">Meridian Clinic</div>
+            </div>
+
+            <h1>Create your account</h1>
+            <p class="auth-sub">Join as a patient or a doctor.</p>
+
+            <div class="role-toggle">
+                <button type="button" id="role-patient" class="active">Patient</button>
+                <button type="button" id="role-doctor">Doctor</button>
+            </div>
+
+            <div id="form-error" class="form-error hidden"></div>
+            <div id="form-success" class="form-success hidden"></div>
+
+            <form id="register-form">
+                <div class="field">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" required placeholder="Jordan Lee">
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="you@example.com">
+                </div>
+                <div class="field-row">
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required placeholder="At least 6 characters">
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" required placeholder="98765 43210">
+                    </div>
+                </div>
+
+                <div id="doctor-fields" class="hidden">
+                    <div class="field">
+                        <label for="specialization">Specialization</label>
+                        <input type="text" id="specialization" placeholder="Cardiologist">
+                    </div>
+                    <div class="field">
+                        <label for="experienceYears">Years of experience</label>
+                        <input type="number" id="experienceYears" min="0" placeholder="5">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Create account</button>
+            </form>
+
+            <p class="auth-switch">Already registered? <a href="login.html">Sign in</a></p>
+        </div>
+    </div>
+
+    <div class="auth-illustration">
+        <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="110" y="90" width="180" height="220" rx="14" stroke="#2a6f73" stroke-width="1.2"/>
+            <line x1="140" y1="140" x2="260" y2="140" stroke="#2a6f73" stroke-width="1.2"/>
+            <line x1="140" y1="170" x2="260" y2="170" stroke="#2a6f73" stroke-width="1.2"/>
+            <line x1="140" y1="200" x2="220" y2="200" stroke="#2a6f73" stroke-width="1.2"/>
+            <circle cx="200" cy="255" r="26" stroke="#e2a33d" stroke-width="2.5"/>
+            <line x1="200" y1="241" x2="200" y2="269" stroke="#e2a33d" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="186" y1="255" x2="214" y2="255" stroke="#e2a33d" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <div class="auth-illustration-quote">
+            "Every doctor, every slot, one calendar."
+            <span>Set your availability once, patients book the rest.</span>
+        </div>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
