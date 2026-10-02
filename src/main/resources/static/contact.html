@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Meridian Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+    <div class="auth-brand">
+        <div class="auth-brand-mark">M</div>
+        <div class="auth-brand-name">Meridian Clinic</div>
+    </div>
+    <div class="site-nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="current">Contact</a>
+    </div>
+    <div class="site-nav-actions">
+        <a href="login.html" class="btn btn-ghost">Sign in</a>
+        <a href="register.html" class="btn btn-primary">Book an appointment</a>
+    </div>
+</nav>
+
+<section class="hero" style="grid-template-columns: 1fr; padding-bottom: 1rem;">
+    <div>
+        <h1>Talk to us</h1>
+        <p class="lead">Questions about a booking, a doctor, or partnering with Meridian — reach out and we'll get back within a day.</p>
+    </div>
+</section>
+
+<div class="contact-layout">
+    <div>
+        <div class="contact-info-card">
+            <div class="contact-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L14 12l5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
+            </div>
+            <div>
+                <div class="label">Phone</div>
+                <div class="val">+91 63776 41659</div>
+            </div>
+        </div>
+        <div class="contact-info-card">
+            <div class="contact-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg>
+            </div>
+            <div>
+                <div class="label">Email</div>
+                <div class="val">care@meridianclinic.com</div>
+            </div>
+        </div>
+        <div class="contact-info-card">
+            <div class="contact-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <div>
+                <div class="label">Address</div>
+                <div class="val">221 Residency Road, Jaipur, RJ</div>
+            </div>
+        </div>
+        <div class="contact-info-card" style="border-bottom:none;">
+            <div class="contact-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </div>
+            <div>
+                <div class="label">Hours</div>
+                <div class="val">Mon – Sat, 8am – 8pm</div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div id="contact-success" class="form-success hidden">Message sent. We'll reply within a day.</div>
+        <form id="contact-form">
+            <div class="field">
+                <label for="c-name">Name</label>
+                <input type="text" id="c-name" required placeholder="Your name">
+            </div>
+            <div class="field">
+                <label for="c-email">Email</label>
+                <input type="email" id="c-email" required placeholder="you@example.com">
+            </div>
+            <div class="field">
+                <label for="c-message">Message</label>
+                <textarea id="c-message" required rows="5" placeholder="How can we help?"
+                          style="width:100%; padding:0.7rem 0.85rem; border:1px solid var(--line); border-radius:6px; font-family:var(--font-body); font-size:0.95rem; resize:vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+        </form>
+    </div>
+</div>
+
+<section class="section">
+    <div class="section-head">
+        <h2>Frequently asked</h2>
+        <p>Common questions before you book.</p>
+    </div>
+    <div id="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">Do I need to create an account to book?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Yes — a quick patient account lets us confirm your slot and keep a record of past visits.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Can I book the same doctor twice in one day?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>No two patients can hold the same date and time with a doctor — once a slot is taken, it's removed from availability immediately.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How do I cancel or reschedule?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Open "My appointments" from your dashboard — cancellations update instantly and free the slot for other patients.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Are doctors verified?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Every doctor registers with their specialization and years of experience, visible on their profile before you book.</p></div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <span>© 2026 Meridian Clinic</span>
+    <div class="footer-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

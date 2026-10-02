@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: hospital-db
+    environment:
+      POSTGRES_DB: hospital_appointment_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 2552
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: hospital-app
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/hospital_appointment_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 2552
+      JWT_SECRET: 8f42a73054b1749f8f58848be5e6502c6b6c6c6b6c6c6c6b6c6c6c6b6c6c6c6b
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:

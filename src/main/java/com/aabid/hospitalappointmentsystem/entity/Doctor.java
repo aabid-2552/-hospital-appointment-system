@@ -24,6 +24,6 @@ public class Doctor {
     @Column(nullable = false)
     private String specialization;
 
-    @Column(nullable = false)
-    private Integer experienceYear;
+    @Column(name = "experience_years", nullable = false)
+    private Integer experienceYears;
 }

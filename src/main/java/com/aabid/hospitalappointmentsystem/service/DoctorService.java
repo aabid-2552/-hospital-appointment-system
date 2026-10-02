@@ -39,7 +39,7 @@ public class DoctorService {
         Doctor doctor = new Doctor();
         doctor.setUser(savedUser);
         doctor.setSpecialization(request.getSpecialization());
-        doctor.setExperienceYear(request.getExperienceYears());
+        doctor.setExperienceYears(request.getExperienceYears());
 
         return doctorRepository.save(doctor);
     }

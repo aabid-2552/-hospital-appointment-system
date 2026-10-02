@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Meridian Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+    <div class="auth-brand">
+        <div class="auth-brand-mark">M</div>
+        <div class="auth-brand-name">Meridian Clinic</div>
+    </div>
+    <div class="site-nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html" class="current">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="site-nav-actions">
+        <a href="login.html" class="btn btn-ghost">Sign in</a>
+        <a href="register.html" class="btn btn-primary">Book an appointment</a>
+    </div>
+</nav>
+
+<section class="hero" style="grid-template-columns: 1fr;">
+    <div>
+        <h1>Built by people tired of waiting on hold.</h1>
+        <p class="lead">Meridian started as a scheduling tool for one clinic frustrated with missed calls and double-booked slots. It's since grown into the way thousands of patients find and book care.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-head">
+        <h2>What we stand for</h2>
+        <p>Three principles guide every feature we build.</p>
+    </div>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            </div>
+            <h3>Clarity over complexity</h3>
+            <p>A booking should take three taps, not three phone transfers. We design for the fastest honest path to a confirmed slot.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Trust, by design</h3>
+            <p>Every slot shown is real. If a time is bookable, it's bookable — no overbooking, no surprise cancellations.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg>
+            </div>
+            <h3>Built around people</h3>
+            <p>Doctors keep their own schedules. Patients see only what's actually open. No one manages anyone else's calendar by hand.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-head">
+        <h2>Our doctors</h2>
+        <p>Specialists currently taking appointments through Meridian.</p>
+    </div>
+    <div id="about-doctor-list" class="doctor-showcase-grid">
+        <p style="color:var(--ink-soft)">Loading doctors...</p>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <span>© 2026 Meridian Clinic</span>
+    <div class="footer-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

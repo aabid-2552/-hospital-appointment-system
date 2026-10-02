@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meridian Clinic — Care, coordinated</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+    <div class="auth-brand">
+        <div class="auth-brand-mark">M</div>
+        <div class="auth-brand-name">Meridian Clinic</div>
+    </div>
+    <div class="site-nav-links">
+        <a href="home.html" class="current">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="site-nav-actions">
+        <a href="login.html" class="btn btn-ghost">Sign in</a>
+        <a href="register.html" class="btn btn-primary">Book an appointment</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div>
+        <h1>Your care, coordinated in one place.</h1>
+        <p class="lead">Find the right doctor, book a visit in minutes, and track every appointment without a single phone call.</p>
+        <div class="hero-actions">
+            <a href="register.html" class="btn btn-primary">Book an appointment</a>
+            <a href="about.html" class="btn btn-ghost">Learn more</a>
+        </div>
+    </div>
+    <div class="hero-card">
+        <div class="hero-card-row">
+            <span class="label">Next available</span>
+            <span class="value">Today, 4:30 PM</span>
+        </div>
+        <div class="hero-card-row">
+            <span class="label">Specialization</span>
+            <span class="value">Cardiology</span>
+        </div>
+        <div class="hero-card-row">
+            <span class="label">Wait time</span>
+            <span class="value">Under 5 minutes</span>
+        </div>
+    </div>
+</section>
+
+<div class="stats-strip">
+    <div class="stat-block"><div class="stat-number" data-target="24">0</div><div class="stat-label">Specializations</div></div>
+    <div class="stat-block"><div class="stat-number" data-target="120">0</div><div class="stat-label">Doctors on board</div></div>
+    <div class="stat-block"><div class="stat-number" data-target="18000">0</div><div class="stat-label">Appointments booked</div></div>
+    <div class="stat-block"><div class="stat-number" data-target="98">0</div><div class="stat-label">% on-time visits</div></div>
+</div>
+
+<section class="section">
+    <div class="section-head">
+        <h2>Everything a visit needs, nothing it doesn't</h2>
+        <p>Built around how people actually book care — fast, clear, and without the back-and-forth.</p>
+    </div>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+            </div>
+            <h3>Search by specialization</h3>
+            <p>Filter doctors by specialty or name and see real availability before you commit to a visit.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </div>
+            <h3>Instant slot booking</h3>
+            <p>Pick a date and time that works for you. Conflicting slots are blocked automatically, so double-booking never happens.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Status you can track</h3>
+            <p>Every booking moves through clear stages — pending, confirmed, completed — so you always know where you stand.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-head">
+        <h2>Meet a few of our doctors</h2>
+        <p>Real specialists, currently accepting new patients.</p>
+    </div>
+    <div id="home-doctor-list" class="doctor-showcase-grid">
+        <p style="color:var(--ink-soft)">Loading doctors...</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="testimonial-wrap">
+        <p class="testimonial-quote" id="testimonial-text">"I booked a cardiologist in under two minutes and never had to call the front desk once."</p>
+        <p class="testimonial-author" id="testimonial-author">— Arjun Mehta, patient since 2024</p>
+        <div class="testimonial-dots" id="testimonial-dots"></div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <span>© 2026 Meridian Clinic</span>
+    <div class="footer-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

@@ -19,7 +19,7 @@
         </div>
 
         <nav class="sidebar-nav">
-            <button class="active" data-view="view-doctors">Find a doctor</button>
+            <button class="active" id="nav-doctors" data-view="view-doctors">Find a doctor</button>
             <button data-view="view-appointments">My appointments</button>
         </nav>
 
@@ -37,20 +37,17 @@
                 <h1>Find a doctor</h1>
                 <p>Search by name or specialization, then book a visit.</p>
             </div>
-
             <div class="search-bar">
                 <input type="text" id="doctor-search" placeholder="Search, e.g. Cardiologist or Dr. Rao">
             </div>
-
             <div id="doctor-list"></div>
         </section>
 
         <section id="view-appointments" class="view">
             <div class="main-header">
-                <h1>My appointments</h1>
-                <p>Everything you've booked, past and upcoming.</p>
+                <h1 id="appointments-title">My appointments</h1>
+                <p id="appointments-sub">Everything you've booked, past and upcoming.</p>
             </div>
-
             <div id="appointment-list"></div>
         </section>
 
@@ -61,9 +58,7 @@
     <div class="modal">
         <h2>Book an appointment</h2>
         <p class="sub">with <span id="modal-doctor-name"></span></p>
-
         <div id="booking-error" class="form-error hidden"></div>
-
         <form id="booking-form">
             <input type="hidden" id="booking-doctor-id">
             <div class="field">

@@ -5,6 +5,7 @@ import com.aabid.hospitalappointmentsystem.entity.Appointment;
 import com.aabid.hospitalappointmentsystem.entity.AppointmentStatus;
 import com.aabid.hospitalappointmentsystem.service.AppointmentService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
@@ -20,15 +21,26 @@ public class AppointmentController {
     private final AppointmentService appointmentService;
 
     @PostMapping("/book")
-    public ResponseEntity<Appointment> bookAppointment(
+    public ResponseEntity<?> bookAppointment(
             Authentication authentication,
             @RequestBody BookAppointmentRequest request) {
+
+        if (authentication == null || !authentication.isAuthenticated()) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User is not authenticated");
+        }
+
         String email = authentication.getName();
-        return ResponseEntity.ok(appointmentService.bookAppointment(email, request));
+        //System.out.println("Booking Request Received for User: " + email + " | Payload: " + request);
+
+        Appointment appointment = appointmentService.bookAppointment(email, request);
+        return ResponseEntity.ok(appointment);
     }
 
     @GetMapping("/my")
     public ResponseEntity<List<Appointment>> getMyAppointments(Authentication authentication) {
+        if (authentication == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
         String email = authentication.getName();
         return ResponseEntity.ok(appointmentService.getMyAppointments(email));
     }
@@ -45,5 +57,10 @@ public class AppointmentController {
             @PathVariable Long id,
             @RequestParam AppointmentStatus status) {
         return ResponseEntity.ok(appointmentService.updateStatus(id, status));
+    }
+    @GetMapping("/doctor/my")
+    public ResponseEntity<List<Appointment>> getMyDoctorAppointments(Authentication authentication) {
+        String email = authentication.getName();
+        return ResponseEntity.ok(appointmentService.getAppointmentsForDoctorEmail(email));
     }
 }
